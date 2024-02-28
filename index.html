@@ -1,1 +1,32 @@
-Hello
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+
+    <title>CLOS TECH</title>
+
+    <style type="text/css">
+    body
+    {
+        font: 1em monospace;
+        color: #ddd;
+        background-color: #222;
+    }
+    </style>
+</head>
+<body>
+    CLOS [1]<br />
+Copyright (c) 2020 Verena Lambrecht. All rights reserved.<br />
+<br />
+loading... <span id="cursor">█</span>
+
+    <script type="text/javascript">
+    setInterval(function()
+    {
+        var display = document.getElementById('cursor').style.display;
+
+        document.getElementById('cursor').style.display = (display == 'inline') ? 'none' : 'inline';
+    }, 500);
+    </script>
+</body>
+</html>
