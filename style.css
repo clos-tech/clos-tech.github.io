@@ -1,0 +1,216 @@
+@font-face {
+    font-family: testfont;
+    src: url("techna-sans.otf") format("opentype");
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    text-align: center;
+
+}
+
+section {
+    min-height: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+a {
+    font-family: 'testfont';
+    font-weight: 500;
+    color: #494949;
+    text-transform: uppercase;
+
+}
+
+h2 {
+    color: white;
+}
+
+h3 {
+    font-size: 40px;
+    padding-top: 8%;
+    margin-bottom: 5px;
+}
+
+p,
+h4 {
+    color: #494949;
+}
+
+hr {
+    width: 30px;
+    height: 3px;
+    background: #494949;
+    border: 0px;
+    margin: 0 auto 40px auto;
+}
+
+#logo {
+    transition: all 300ms;
+    -webkit-transition: all 300ms;
+    -moz-transition: all 300ms;
+}
+
+/* HEADER ************************/
+
+header {
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #494949;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+#logo {
+    width: 140px;
+    float: left;
+    margin: 5px 0 0 40px;
+}
+
+#logo:hover {
+    opacity: 0.5;
+}
+
+#logo img {
+    width: 80%;
+}
+
+header nav {
+    float: right;
+    margin: 10 50 0 0
+}
+
+header nav ul li {
+    float: left;
+    margin-right: 25px;
+}
+
+header nav ul li a {
+    font-size: 16px;
+    color: white;
+}
+
+header nav ul li:hover {
+    opacity: 0.5;
+}
+
+/* HOME **********************/
+
+#home {
+    background: url("bgcold.jpg");
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+#home h1 {
+    margin: 240px auto 0 auto;
+    font-size: 110px;
+}
+
+#home h2 {
+    margin: 0 auto 0 auto;
+    font-size: 30px;
+}
+
+#home img {
+    width: 32px;
+    margin-top: 150px;
+    opacity: 0.7;
+}
+
+
+/* Products ************************/
+
+#products {
+    background-color: rgba(236, 210, 121, 0.7);
+}
+
+#products div {
+    width: 90%;
+    margin: 0 auto 0 auto;
+}
+
+#products ul {
+    padding: 0;
+}
+
+#products ul li {
+    background-color: white;
+    width: 32%;
+    height: 90%;
+    float: left;
+    margin-bottom: 15px;
+    margin-left: 10px;
+}
+
+
+/* Use Case ************************/
+
+#usecase {
+    background-color: rgb(199, 199, 199, 0.7);
+
+}
+
+#usecase p {
+    width: 700 px;
+    margin: 0 auto 0 auto;
+}
+
+/* About ************************/
+
+#about img {
+    width: 200px;
+}
+
+#about h4 {
+    font-size: 25px;
+}
+
+#about p {
+    width: 700px;
+    margin: 0 auto 0 auto;
+}
+
+
+/* Media ************************/
+
+#media {
+    background-color: rgb(199, 199, 199, 0.7);
+}
+
+#media div ul li a img {
+    width: 300px;
+    margin-top: 150px;
+    opacity: 0.7;
+}
+
+/* Footer ************************/
+
+footer {
+    width: 100%;
+    height: 70%;
+    background-color: #494949;
+
+}
+
+footer p {
+    font-size: 12px;
+    color: #f0f0f0;
+    padding-top: 30px;
+}
