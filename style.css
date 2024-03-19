@@ -1,5 +1,5 @@
 @font-face {
-    font-family: testfont;
+    font-family: technafont;
     src: url("techna-sans.otf") format("opentype");
 }
 
@@ -27,8 +27,9 @@ li {
 h1,
 h2,
 h3,
+h4,
 a {
-    font-family: 'testfont';
+    font-family: 'technafont';
     font-weight: 500;
     color: #494949;
     text-transform: uppercase;
@@ -136,7 +137,25 @@ header nav ul li:hover {
 }
 
 
-/* Products ************************/
+/* Use Case ************************/
+
+#usecase {
+    background-color: rgb(199, 199, 199, 0.7);
+
+}
+
+#usecase img {
+    width: 500px;
+    height: 300px;
+}
+
+#usecase p {
+    width: 800px;
+    padding: 2%;
+    margin: 0 auto 0 auto;
+}
+
+/* Visions ************************/
 
 #products {
     background-color: rgba(236, 210, 121, 0.7);
@@ -154,23 +173,10 @@ header nav ul li:hover {
 #products ul li {
     background-color: white;
     width: 32%;
-    height: 90%;
+    height: 250px;
     float: left;
     margin-bottom: 15px;
     margin-left: 10px;
-}
-
-
-/* Use Case ************************/
-
-#usecase {
-    background-color: rgb(199, 199, 199, 0.7);
-
-}
-
-#usecase p {
-    width: 700 px;
-    margin: 0 auto 0 auto;
 }
 
 /* About ************************/
