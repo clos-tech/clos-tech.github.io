@@ -217,6 +217,14 @@ header nav ul li:hover {
 
 }
 
+/* Impressum *********************/
+
+
+#legal {
+    background-color: rgba(236, 210, 121, 0.7);
+}
+
+
 /* Footer ************************/
 
 footer {
@@ -227,12 +235,14 @@ footer {
 
 footer ul {
     width: 900px;
+    height: 75px;
     margin: 0 auto 0 auto;
     padding-top: 0;
 }
 
-footer #contact li{
-    width: 50%;
+footer li{
+    width: 33.3%;
+    padding-top: 2%;
     float: left;
 }
 
