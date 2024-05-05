@@ -105,8 +105,8 @@ a:not([class]) {
 img,
 svg,
 figure {
-    max-width: 100%;
-    height: 100%;
+    max-width: 90%;
+    height: 90%;
     display: block;
     object-fit: cover;
 }
@@ -203,8 +203,6 @@ img.logo {
     .primary-header {
         padding-top: var(--size-900);
     }
-
-    .primary-navigation {}
 
     .nav-list {
         display: flex;
