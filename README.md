@@ -1,2 +1,2 @@
 # clos
-Website for project CLOS
+Website for project FALSIFYR
