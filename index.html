@@ -1,465 +1,187 @@
 <!DOCTYPE html>
-<html id="top" lang="de">
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>FALSIFYR | Reclaim Trust in High Fashion Resale</title>
-    <link rel="icon" type="image/svg+xml" href="images/favicon.ico">
-    <link href="stylesheets/application.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="images/favicon-32x32.png" type="image/png">
+  <link rel="apple-touch-icon" sizes="57x57" href="images/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="images/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="images/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="images/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="images/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="images/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="images/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="images/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="images/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="images/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <title>CLOS</title>
+  <style>
+    :root {
+      --green: #0a4d35;
+      --pink: #FF4F9A;
+      --yellow: #FFD300;
+      --blue: #1E5BFF;
+      --black: #111111;
+      --white: #FAFAFA;
+      --gig-pilot-blue: rgb(59 130 246);
+      --falsifier-grey: rgb(107 114 128);
+      --falsifier-dark-grey: rgb(70, 76, 88);
+      --meal-wiggler-golden: rgb(175, 162, 58);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      background: var(--white);
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      color: var(--black);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 420px;
+      padding: 56px 28px 48px;
+      background: var(--white);
+      border: 6px solid var(--black);
+    }
+
+    /* Straight Memphis block — no rotation, no decoration */
+    .logo {
+      width: 72px;
+      height: 72px;
+      margin: 0 auto 36px;
+      /* background: var(--green);*/
+      border: 4px solid var(--black);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 3.75rem;
+      /*letter-spacing: 0.12em;*/
+    }
+
+    h1 {
+      font-size: 1.6rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 32px;
+      text-align: center;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .link {
+      text-decoration: none;
+      padding: 20px 16px;
+      border: 4px solid var(--black);
+      font-size: 0.9rem;
+      font-weight: 800;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--black);
+      background: var(--falsifier-grey);
+      box-shadow: 6px 6px 0 var(--black);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .link:nth-child(2) {
+      background: var(--gig-pilot-blue);
+    }
+
+    .link:nth-child(3) {
+      background: var(--meal-wiggler-golden);
+    }
+
+    .link:nth-child(4) {
+      background: var(--pink);
+    }
+
+    .link:hover {
+      transform: translate(-2px, -2px);
+      box-shadow: 8px 8px 0 var(--black);
+    }
+
+    .footer {
+      margin-top: 40px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-align: center;
+      letter-spacing: 0.2em;
+    }
+
+    /* Footer Legal on Imprint Page */
+    .legal-footer {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+    }
+
+    .legal-footer a {
+      color: var(--black);
+      text-decoration: none;
+      padding: 0 4px;
+    }
+
+    .legal-footer span {
+      margin: 0 6px;
+    }
+
+    .imprint-only {
+      display: block;
+      margin-top: 40px;
+      font-size: 0.6rem;
+      text-align: center;
+      letter-spacing: 0.2em;
+      color: var(--black);
+      text-decoration: none;
+    }
+  </style>
 </head>
 
 <body>
-    <div class="grey-album-bg"></div>
-    <!--- HEADER ------------------------------->
-    <header class="primary-header">
-        <div class="nav-wrapper">
-            <div class="language-switch">
-                <button class="language-btn active" data-lang="de">DE</button>
-                <button class="language-btn" data-lang="en">EN</button>
-            </div>
-            <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
-                <img src="images/icon-burger.svg" class="icon icon-burger" aria-hidden="true" alt="Menu">
-                <img src="images/icon-close.svg" class="icon icon-close display-none" aria-hidden="true" alt="Close">
-            </button>
-            <nav class="primary-navigation" id="primary-navigation" data-visible="false">
-                <ul aria-label="Primary" class="nav-list" role="list">
-                    <li><a href="#home" class="anchor-link" data-de="Home" data-en="Home">Home</a></li>
-                    <li><a href="#problem" class="anchor-link">Problem</a></li>
-                    <li><a href="#solution" class="anchor-link">Solution</a></li>
-                    <li><a href="#usecase" class="anchor-link">Use Case</a></li>
-                    <li><a href="#vision" class="anchor-link">Visions</a></li>
-                    <li><a href="#about" class="anchor-link">About</a></li>
-                    <li><a href="#media" class="anchor-link">Media</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <main class="container">
+    <div class="logo">C</div>
+    <h1>CLOS TECH</h1>
 
-    <main>
-        <section id="home">
-            <div class="cover">
-                <h1 class="primary-home">FALSIFYR</h1>
-                <h2 class="secondary-home">Reclaim Trust in High Fashion Resale</h2>
-            </div>
-        </section>
+    <nav class="links">
+      <a class="link" target="_blank" rel="noopener norefferer" href="https://falsifyr.clos.tech">Falsifyr</a>
+      <a class="link" target="_blank" rel="noopener norefferer" href="https://gig-pilot.clos.tech">Gig Pilot</a>
+      <!--<a class="link" target="_blank" rel="noopener norefferer" href="https://meal-wiggler.clos.tech">Meal Wiggler</a>
+      <a class="link" href="shop.html">Shop</a> -->
+    </nav>
 
-        <div class="container">
-            <!--- PROBLEM ------------------------------->
-            <section id="problem">
-                <h1 class="primary-heading">Problem</h1>
-                <div class="content">
-                    <div class="show-image">
-                        <img class="show-image" src="images/real_deal_comic.png" alt="Is it the real deal?">
-                    </div>
-                    <p data-de="Der Markt für Second-Hand-Designerartikel boomt. Was Kundinnen und Kunden antreibt? Die Sehnsucht nach ikonischen Stücken zu einem fairen Preis. Doch der wahre Deal ist nur dann ein Deal, wenn das Produkt echt ist.
-
-Hier liegt das größte Hindernis: Vertrauen. Denn manche Fälschungen sind raffinierter denn je – und die Angst, auf eine Kopie hereinzufallen, ist real. Wer auf Nummer sicher gehen will, kauft neu – direkt beim Hersteller. Doch was, wenn das Objekt der Begierde gar nicht mehr produziert wird?
-
-Dann beginnt die Suche – wie beim Kunstmarkt, wo Werke verstorbener Künstlerinnen und Künstler nur noch über den Zweitmarkt erhältlich sind. Was dort Sicherheit gibt? Expertinnen und Experten mit geschultem Blick. 
-Sie erkennen an Pinselstrich, Material und Stil, was echt ist – und was nicht.
-Nicht jede Fälschung ist perfekt. Für Fachleute ist es oft ein Leichtes, Originale von solchen Kopien zu unterscheiden – manchmal genügt dafür nur ein einziges Bild und ihr geschultes Auge.
-
-" data-en="The market for second-hand designer goods is booming.
-What drives buyers? A longing for iconic pieces at a fair price.
-But a good deal is only truly a deal if the product is authentic.
-
-This is where the biggest challenge lies: trust.
-Some counterfeits today are more sophisticated than ever – and the fear of being deceived is real.
-Those who want absolute certainty buy new, directly from the brand.
-But what if the item of desire is no longer being produced?
-
-That’s when the search begins – just like in the art world, where works by deceased artists are only available on the secondary market.
-And what builds trust there? Experts with a trained eye.
-They can detect authenticity by analyzing brushstrokes, materials, and style.
-
-Not every fake is flawless. For seasoned professionals, telling the difference is often easy –
-sometimes all it takes is a single image and a trained eye.
-
-">
-                        Der Markt für Second-Hand-Designerartikel boomt. Was Kundinnen und Kunden antreibt? Die
-                        Sehnsucht nach ikonischen Stücken zu einem fairen Preis. Doch der wahre Deal ist nur dann ein
-                        Deal, wenn das Produkt echt ist.
-
-                        Hier liegt das größte Hindernis: Vertrauen. Denn manche Fälschungen sind raffinierter denn je –
-                        und die Angst, auf eine Kopie hereinzufallen, ist real. Wer auf Nummer sicher gehen will, kauft
-                        neu – direkt beim Hersteller. Doch was, wenn das Objekt der Begierde gar nicht mehr produziert
-                        wird?
-
-                        Dann beginnt die Suche – wie beim Kunstmarkt, wo Werke verstorbener Künstlerinnen und Künstler
-                        nur noch über den Zweitmarkt erhältlich sind. Was dort Vertrauen schafft? Expertinnen und
-                        Experten mit geschultem Blick.
-                        Sie erkennen an Pinselstrich, Material und Stil, was echt ist – und was nicht.
-                        Nicht jede Fälschung ist perfekt. Für Fachleute ist es oft ein Leichtes, Originale von solchen
-                        Kopien zu unterscheiden – manchmal genügt dafür dank ihres geschulten Auges nur ein einziges
-                        Bild.
-
-
-
-
-                    </p>
-                     <p class="secondary-heading" data-de="Dieses geschulte Auge ist FALSIFYR"
-                        data-en="This trained eye is FALSIFYR">
-                        Dieses geschulte Auge ist FALSIFYR
-                    </p>
-
-                </div>
-            </section>
-
-            <!-- SOLUTION SECTION -->
-            <section id="solution">
-                <h2 class="primary-heading" data-de="Die Lösung" data-en="The Solution">Die Lösung</h2>
-                <div class="content">
-                    <p data-de="FALSIFYR ist eine Software zur Identifikation von Produktfälschungen im Luxussegment. Durch den Einsatz von moderner und innovativer Technologien können Resaleplattformen Kundenangebote effizient auf Fälschungen prüfen, bevor diese weitere Kosten verursachen."
-                        data-en="FALSIFYR is a software solution for identifying counterfeit products in the luxury segment. By leveraging advanced technology, resale platforms can efficiently screen customer listings for fakes—before they lead to further costs or operational risks.">
-                        FALSIFYR ist eine Software zur Identifikation von Produktfälschungen im Luxussegment.
-                        Durch den Einsatz von modernster KI-Technologie können Resaleplattformen Kundenangebote
-                        effizient auf Fälschungen prüfen, bevor diese weitere Kosten verursachen.
-                    </p>
-
-                    <div class="features-grid">
-                        <div class="feature-card">
-                            <h3 data-de="Automatisierte Erkennung" data-en="Automated Detection">Automatisierte
-                                Erkennung</h3>
-                            <p data-de="FALSIFYR analysiert Produktbilder und Metadaten auf die Details, anhand derer menschliche Experten die Fälschung identifizieren"
-                                data-en="FALSIFYR analyzes product images and metadata for the very details that human experts rely on to detect counterfeits.">
-                                FALSIFYR analysiert Produktbilder und erkennt feinste Details, die auf Fälschungen hinweisen
-                                können.
-                            </p>
-                        </div>
-
-                        <div class="feature-card">
-                            <h3 data-de="Expertenwissen" data-en="Expert Knowledge">Expertenwissen</h3>
-                            <p data-de="Unser System wird kontinuierlich mit dem Fachwissen von Luxusmarken-Experten trainiert und verbessert."
-                                data-en="Our system is continuously trained and improved with the expertise of luxury brand experts.">
-                                Unser System wird kontinuierlich mit dem Fachwissen von Luxusmarken-Experten trainiert
-                                und verbessert.
-                            </p>
-                        </div>
-
-                        <div class="feature-card">
-                            <h3 data-de="Nahtlose Integration" data-en="Seamless Integration">Nahtlose Integration</h3>
-                            <p data-de="FALSIFYR lässt sich problemlos in bestehende E-Commerce-Plattformen und Authentifizierungsprozesse integrieren."
-                                data-en="FALSIFYR can be easily integrated into existing e-commerce platforms and authentication processes.">
-                                FALSIFYR lässt sich problemlos in bestehende E-Commerce-Plattformen und
-                                Authentifizierungsprozesse integrieren.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!--- USE CASE ------------------------------->
-
-            <section id="usecase">
-                <h2 class="primary-heading" data-de="Anwendungsfall" data-en="Use Case">Anwendungsfall</h2>
-                <div class="content">
-                    <h3 class="secondary-heading" data-de="So funktioniert FALSIFYR" data-en="How FALSIFYR works">So
-                        funktioniert FALSIFYR</h3>
-
-                    <div class="process-flow">
-                        <div class="process-step">
-                            <div class="highlight-box"
-                                data-de="Nutzer lädt Fotos des Luxusartikels auf der Resale-Plattform hoch"
-                                data-en="User uploads photos of the luxury item on the resale platform">
-                                Nutzer lädt Fotos des Luxusartikels auf der Resale-Plattform hoch
-                            </div>
-                        </div>
-
-                        <svg class="arrow-down" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-light)"
-                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                            <line x1="12" y1="0" x2="12" y2="20"></line>
-                            <polyline points="6,14 12,20 18,14"></polyline>
-                        </svg>
-
-                        <div class="process-step">
-                            <div class="highlight-box" data-de="Plattform sendet Bilder und Metadaten an die FALSIFYR API"
-                                data-en="Platform sends images and metadata to the FALSIFYR API">
-                                Plattform sendet Bilder und Metadaten an die FALSIFYR API
-                            </div>
-                        </div>
-
-                        <svg class="arrow-down" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-light)"
-                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                            <line x1="12" y1="0" x2="12" y2="20"></line>
-                            <polyline points="6,14 12,20 18,14"></polyline>
-                        </svg>
-
-                        <div class="process-step">
-                            <div class="highlight-box"
-                                data-de="FALSIFYR analysiert Bilder und prüft auf Authentizitätsmerkmale"
-                                data-en="FALSIFYR analyzes images and checks for authenticity features">
-                                FALSIFYR analysiert Bilder und prüft auf Authentizitätsmerkmale
-                            </div>
-                        </div>
-
-                        <svg class="arrow-down" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-light)"
-                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                            <line x1="12" y1="0" x2="12" y2="20"></line>
-                            <polyline points="6,14 12,20 18,14"></polyline>
-                        </svg>
-
-                        <div class="process-step">
-                            <div class="highlight-box" data-de="Bewertung wird an die Plattform zurückgesendet"
-                                data-en="Result rating is sent back to the platform">
-                                Bewertung wird an die Plattform zurückgesendet
-                            </div>
-                        </div>
-                    </div>
-
-                    <h3 class="secondary-heading" data-de="Vorteile für Resale-Plattformen"
-                        data-en="Benefits for Resale Platforms">Vorteile für Resale-Plattformen</h3>
-
-                    <div class="features-grid">
-                        <div class="feature-card">
-                            <h4 data-de="Gesteigertes Kundenvertrauen" data-en="Increased Customer Trust">Gesteigertes
-                                Kundenvertrauen</h4>
-                            <p data-de="Höhere Glaubwürdigkeit durch weniger offensichtliche Plagiate"
-                                data-en="Greater credibility through less obvious counterfeits">
-                                Höhere Glaubwürdigkeit durch weniger offensichtliche Plagiate </p>
-                        </div>
-                        <div class="feature-card">
-                            <h4 data-de="Reduzierung von Transport und Lagerkosten"
-                                data-en="Lower transport and storage costs">Reduzierung von Transport und
-                                Lagerkosten</h4>
-                            <p data-de="Fälschungen gelangen gar nicht erst in den Verkaufsprozess oder in die manuelle Prüfung."
-                                data-en="Counterfeit items are intercepted before reaching the sales pipeline or requiring manual authentication">
-                                PFälschungen gelangen gar nicht erst in den Verkaufsprozess oder in die manuelle
-                                Prüfung.
-                            </p>
-                        </div>
-                        <div class="feature-card">
-                            <h4 data-de="Kapazitäten für die Prüfung durch Expert:innen freisetzen"
-                                data-en="Freeing up time for human expert authentication">
-                                Mehr Zeit für manuelle Kontrollen</h4>
-                            <p data-de="Erforderliche manuelle Checks können mit größerer Sorgfalt durchgeführt werden. So bleibt mehr Zeit für die schwierigen Fälle."
-                                data-en="Manual checks can be performed more thoroughly, allowing experts to focus on the truly challenging cases.">
-                                Erforderliche manuelle Checks können mit größerer Sorgfalt durchgeführt werden. So
-                                bleibt mehr Zeit für die schwierigen Fälle.
-                            </p>
-                        </div>
-                    </div>
-
-
-
-                </div>
-                <div>
-                    <br>
-                    <h3 class="secondary-heading"
-                        data-de="Fälschungen werden frühzeitig aussortiert – bevor sie Zeit, Geld oder das Vertrauen der Kundschaft kosten."
-                        data-en="Fakes are filtered out early—before they cost time, money, or customer trust.">
-                        Fälschungen werden frühzeitig aussortiert – bevor sie Zeit, Geld oder das Vertrauen der
-                        Kundschaft kosten.
-                    </h3>
-                </div>
-            </section>
-
-
-
-            <!--- vision ------------------------------->
-            <section id="vision">
-                <h1 class="primary-heading">Visions</h1>
-
-                <ul class="shows" role="list">
-                    <li class="event">
-                        <div class="show-image">
-                            <img class="show-image" src="images/pow.png" alt="Evaluation Service">
-                        </div>
-                        <h4 class="paragraph">Evaluator</h4>
-                        <p data-de="Identifikation von Produkten und Modellvarianten"
-                            data-en="Identification of products and their variants">Eindeutige Identifikation von
-                            Produkten und Modellvarianten</p>
-                        <p data-de="Unterstützung der Preisfindung für B2C Reseller"
-                            data-en="Support for price estimation for B2C reseller">Unterstützung der Preisfindung für
-                            B2C Reseller</p>
-                        <p data-de="Optimierung der Produktsuche und Kategorisierung für C2C"
-                            data-en="Optimized search and product categorization for C2C">Optimierung der
-                            Produktsuchen und Kategorisierung für C2C</p>
-                    </li>
-                    <li class="event">
-                        <div class="show-image">
-                            <img class="show-image" src="images/expert_eye.png" alt="Matcher - eye of the expert">
-                        </div>
-                        <h4 class="paragraph">Matcher</h4>
-                        <p data-de="Identifikation von Abweichungen zum Originalprodukt"
-                            data-en="Less visible counterfeits">
-                            Erkennung von Abweichungen zum Originalprodukt</p>
-                        <p data-de="Erkennung von Auffälligkeiten im Angebotskontext"
-                            data-en="Detection of anomalies in the offer context">Erkennung von Auffälligkeiten im
-                            Angebotskontext</p>
-                        <p data-de="Transparente Einbindung in die unternehmensspezifischen Prüfprozesse"
-                            data-en="Transparent integration into company-specific verification processes">Transparente
-                            Einbindung in die unternehmensspezifischen Prüfprozesse</p>
-
-                    </li>
-                    <li class="event">
-                        <div class="show-image">
-                            <img class="show-image" src="images/research.png" alt="Research Service">
-                        </div>
-                        <h4 class="paragraph">Researcher</h4>
-                        <p data-de="Analyse und Forecast von Resale Trends"
-                            data-en="Analysis and forecast of resale trends">Analyse und Forecast von Resale Trends</p>
-                        <p data-de="Community Wissen" data-en="Community knowledge">Community Wissen</p>
-                        <p data-de="Vermittlung qualifizierter Brandexperten"
-                            data-en="Placement of qualified brand experts">Vermittlung qualifizierter Brandexperten</p>
-                    </li>
-                </ul>
-            </section>
-
-            <!--- ABOUT ------------------------------->
-            <section id="about">
-                <h1 class="primary-heading">About</h1>
-                <p data-de="Verena Lambrecht ist Programmiererin und lebt in Worms am Rhein."
-                    data-en="Verena Lambrecht is a software developer based in Worms.">
-                    Verena Lambrecht ist Programmiererin und lebt in Worms am Rhein.
-                </p>
-
-                <p data-de="Seit über zehn Jahren arbeitet sie an der Entwicklung hochwertiger Softwareprodukte und hat dabei alle Phasen der Produktentwicklung kennengelernt. Ihr technischer Fokus liegt seit 2020 auf Backend-Systemen mit Erlang und Elixir, vor allem im Finanz- und Kommunikationsbereich."
-                    data-en="For over ten years, she has worked on developing high-quality software products, gaining experience across all stages of the development process. Since 2020, her focus has been on backend systems using Erlang and Elixir, primarily in the finance and communications sectors.">
-                    Seit über zehn Jahren arbeitet sie an der Entwicklung hochwertiger Softwareprodukte und hat dabei
-                    alle
-                    Phasen der Produktentwicklung kennengelernt. Ihr technischer Fokus liegt seit 2020 auf
-                    Backend-Systemen
-                    mit Erlang und Elixir, vor allem im Finanz- und Kommunikationsbereich.
-                </p>
-
-                <p data-de="Neben der Softwareentwicklung gehört ihre zweite große Leidenschaft der Mode. Bevor sie ihr Informatikstudium begann, absolvierte sie eine Ausbildung zur Modedesign-Assistentin. Dort entwickelte sie ein sicheres Gespür für Passform, Qualität und Verarbeitung."
-                    data-en="Outside of software development, her second great passion is fashion. Before studying computer science, she completed a training program as a fashion design assistant, where she developed a keen sense for fit, quality, and craftsmanship.">
-                    Neben der Softwareentwicklung gehört ihre zweite große Leidenschaft der Mode. Bevor sie ihr
-                    Informatikstudium begann, absolvierte sie eine Ausbildung zur Modedesign-Assistentin. Dort
-                    entwickelte
-                    sie ein sicheres Gespür für Passform, Qualität und Verarbeitung.
-                </p>
-
-                <p data-de="Vor einigen Jahren stieß sie auf ein gefälschtes Designerstück – angeboten über eine seriöse Resale-Plattform. Die Entdeckung war Ausgangspunkt intensiver Recherchen: Warum gelangen solche Produkte überhaupt auf den Markt? Und wie lässt sich das verhindern?"
-                    data-en="A few years ago, she came across a counterfeit designer item—listed on a reputable resale platform. This discovery led to in-depth research: Why do such products reach the market at all? And how can this be prevented?">
-                    Vor einigen Jahren stieß sie auf ein gefälschtes Designerstück – angeboten über eine seriöse
-                    Resale-Plattform. Die Entdeckung war Ausgangspunkt intensiver Recherchen: Warum gelangen solche
-                    Produkte
-                    überhaupt auf den Markt? Und wie lässt sich das verhindern?
-                </p>
-
-                <p data-de="Daraus entstand FALSIFYR – eine Softwarelösung zur frühzeitigen Erkennung von Produktfälschungen. Sie verbindet Verenas technisches Know-how mit ihrer Faszination für Mode, um den Luxus-Resale-Markt sicherer und effizienter zu machen."
-                    data-en="This led to the creation of Falsifyr—a software solution for the early detection of counterfeit products. It combines Verena’s technical expertise with her fascination for fashion to make the luxury resale market safer and more efficient.">
-                    Daraus entstand FALSIFYR – eine Softwarelösung zur frühzeitigen Erkennung von Produktfälschungen. Sie
-                    verbindet Verenas technisches Know-how mit ihrer Faszination für Mode, um den Luxus-Resale-Markt
-                    sicherer und effizienter zu machen.
-                </p>
-
-            </section>
-
-            <!--- MEDIA ------------------------------->
-            <section id="media">
-                <h1 class="primary-heading">Media</h1>
-                <div class="even-columns show-image">
-                    <ul role="list">
-                        <li>
-                            <a href="https://www.stoff-im-kopf.de/textil-accelerator/">
-                                <img src="images/stoffimkopf.png" alt="Stoff im Kopf">
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-        </div>
-    </main>
-
-    <div class="container">
-        <footer>
-            <ul role="list">
-                <li data-de="© 2025 Verena Lambrecht" data-en="© 2025 Verena Lambrecht">© 2025 Verena Lambrecht</li>
-                <li>FALSIFYR - Reclaim Trust in High Fashion Resale</li>
-                <li><a href="impressum.html" data-de="Datenschutzerklärung"
-                        data-en="Privacy Policy">Datenschutzerklärung</a></li>
-                <li><a href="impressum.html#legal" data-de="Impressum" data-en="Legal Notice">Impressum</a></li>
-            </ul>
-        </footer>
+    <div class="footer">EST. 2020</div>
+    <div class="legal-footer">
+      <a href="legal.html"">Legal</a>
+      <span>·</span>
+      <a href=" https://www.linkedin.com/in/verena-lambrecht-47a011237" target="_blank">LinkedIn</a>
+      <span>·</span>
+      <a href="mailto:info@clos.tech">Contact</a>
     </div>
+  </main>
 
-    <script>
-        // Mobile navigation toggle
-        const navToggle = document.querySelector('.mobile-nav-toggle');
-        const primaryNav = document.querySelector('.primary-navigation');
-        const iconBurger = document.querySelector('.icon-burger');
-        const iconClose = document.querySelector('.icon-close');
-
-        navToggle.addEventListener('click', () => {
-            const visibility = primaryNav.getAttribute('data-visible');
-
-            if (visibility === "false") {
-                primaryNav.setAttribute('data-visible', true);
-                navToggle.setAttribute('aria-expanded', true);
-                iconBurger.classList.add('display-none');
-                iconClose.classList.remove('display-none');
-            } else {
-                primaryNav.setAttribute('data-visible', false);
-                navToggle.setAttribute('aria-expanded', false);
-                iconBurger.classList.remove('display-none');
-                iconClose.classList.add('display-none');
-            }
-        });
-
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a.anchor-link').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-
-                window.scrollTo({
-                    top: targetElement.offsetTop - 80,
-                    behavior: 'smooth'
-                });
-
-                // Close mobile menu if open
-                if (primaryNav.getAttribute('data-visible') === "true") {
-                    primaryNav.setAttribute('data-visible', false);
-                    navToggle.setAttribute('aria-expanded', false);
-                    iconBurger.classList.remove('display-none');
-                    iconClose.classList.add('display-none');
-                }
-            });
-        });
-
-        // Language switch functionality
-        const languageBtns = document.querySelectorAll('.language-btn');
-        const htmlElement = document.documentElement;
-
-        function setLanguage(lang) {
-            htmlElement.setAttribute('lang', lang);
-
-            // Update active button style
-            languageBtns.forEach(btn => {
-                if (btn.dataset.lang === lang) {
-                    btn.classList.add('active');
-                } else {
-                    btn.classList.remove('active');
-                }
-            });
-
-            // Update all text elements with data-de and data-en attributes
-            document.querySelectorAll('[data-' + lang + ']').forEach(element => {
-                if (element.tagName === 'A' || element.tagName === 'BUTTON') {
-                    element.textContent = element.getAttribute('data-' + lang);
-                } else if (element.tagName === 'P' || element.tagName === 'H1' || element.tagName === 'H2' || element.tagName === 'H3' || element.tagName === 'H4' || element.tagName === 'LI' || element.tagName === 'DIV') {
-                    element.textContent = element.getAttribute('data-' + lang);
-                }
-            });
-        }
-
-        // Add event listeners to language buttons
-        languageBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                const lang = btn.dataset.lang;
-                setLanguage(lang);
-            });
-        });
-
-        // Initialize with German language
-        setLanguage('de');
-    </script>
 </body>
 
 </html>

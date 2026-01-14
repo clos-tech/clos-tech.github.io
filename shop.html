@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop — CLOS</title>
+  <style>
+    :root {
+      --black: #111111;
+      --white: #FAFAFA;
+      --gold: #FFD700;
+      --blue: rgb(59 130 246);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      background: var(--white);
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      color: var(--black);
+      display: flex;
+      justify-content: center;
+      padding: 60px 20px;
+    }
+
+    .container {
+      max-width: 960px;
+      width: 100%;
+      border: 6px solid var(--black);
+      padding: 48px 40px 56px;
+      background: var(--white);
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 32px;
+      text-align: center;
+      letter-spacing: 0.12em;
+    }
+
+    .editorial {
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      font-size: 0.65rem;
+      font-weight: 800;
+      letter-spacing: 0.22em;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+
+    .statement {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .product {
+      border: 4px solid var(--black);
+      padding: 16px;
+      box-shadow: 6px 6px 0 var(--black);
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .product.black { background: var(--black); color: var(--white); }
+    .product.gold { background: var(--gold); color: var(--black); }
+    .product.blue { background: var(--blue); color: var(--white); }
+
+    .product img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 12px;
+      border: 3px solid currentColor;
+    }
+
+    .product h2 {
+      font-size: 0.9rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 8px;
+    }
+
+    .price {
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      margin-top: auto;
+    }
+
+    .footer {
+      margin-top: 48px;
+      text-align: center;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+    }
+
+    .footer a { color: var(--black); text-decoration: none; padding: 0 6px; }
+    .footer span { margin: 0 6px; }
+
+    /* Lightbox */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: #000000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+
+    .lightbox img {
+      max-width: 90vw;
+      max-height: 90vh;
+      border: 6px solid var(--white);
+    }
+
+    .lightbox.active { display: flex; }
+
+    @media (max-width: 800px) {
+      .grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 520px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+      .lightbox-figure {
+      text-align: center;
+      color: var(--white);
+    }
+
+    .lightbox-figure img {
+      max-width: 90vw;
+      max-height: 80vh;
+      border: 6px solid var(--white);
+      margin-bottom: 16px;
+    }
+
+    .lightbox-figure figcaption {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+  <main class="container">‚
+    <h1>Shop</h1>
+
+    <div class="editorial">
+      <p class="eyebrow">Clos Selection</p>
+      <p class="statement">Beautiful things that aren't software</p>
+    </div>
+
+    <section class="grid">
+      <article class="product black" onclick="openLightbox(this)">
+        <img src="images/watch.jpeg" alt="Tailored Jacket" />
+        <h2>Vintage Omega 1972</h2>
+        <div class="price">€1900</div>
+      </article>
+
+      <article class="product gold" onclick="openLightbox(this)">
+        <img src="images/holy.jpg" alt="Holy" />
+        <h2>Art Print "Holy"</h2>
+        <div class="price">€560</div>
+      </article>
+
+      <article class="product blue" onclick="openLightbox(this)">
+        <img src="images/doll_house.png" alt="Dollhouse Print" />
+        <h2>Dollhouse Print</h2>
+        <div class="price">€180</div>
+      </article>
+    </section>
+
+    <div class="lightbox" onclick="closeLightbox()">
+      <figure class="lightbox-figure">
+        <img id="lightbox-img" src="" alt="Product image enlarged" />
+        <figcaption id="lightbox-caption"></figcaption>
+      </figure>
+    </div>
+
+    <div class="footer">
+      <a href="index.html">Home</a>
+      <span>·</span>
+      <a href="/imprint">Imprint</a>
+      <span>·</span>
+      <a href="mailto:contact@company.com">Contact</a>
+    </div>
+  </main>
+<script>
+  function openLightbox(el) {
+    const img = el.querySelector('img');
+    const title = el.querySelector('h2').innerText;
+    const price = el.querySelector('.price').innerText;
+    const lightbox = document.querySelector('.lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const caption = document.getElementById('lightbox-caption');
+
+    lightboxImg.src = img.src;
+    caption.innerText = `${title} — ${price}`;
+    lightbox.classList.add('active');
+  }
+
+  function closeLightbox() {
+    document.querySelector('.lightbox').classList.remove('active');
+  }
+</script>
+</body>
+</html>
